@@ -1,0 +1,42 @@
+---
+const links = [
+  { 
+    href: '/cv',
+    label: 'Curriculum Vitae',
+    badge: 'May not be up-to-date',
+    icon: '📄'
+  },
+  { 
+    href: '/feedback',
+    label: 'Feedback',
+    icon: '💭'
+  },
+  { 
+    href: 'https://github.com/savioarbues',
+    label: 'Github',
+    icon: '🐙'
+  }
+];
+---
+
+<div class="mb-12">
+  <div class="flex items-center space-x-2 mb-4">
+    <span class="text-xl text-white">📑</span>
+    <h2 class="text-xl font-bold text-white">Pages & Links</h2>
+    <span class="bg-gray-700 text-xs text-gray-300 px-2 py-1 rounded">Pinned</span>
+  </div>
+  
+  <div class="bg-gray-800 rounded-lg p-1">
+    <div class="flex flex-wrap gap-1">
+      {links.map(link => (
+        <a href={link.href} class="flex-1 flex items-center space-x-2 bg-gray-900 text-gray-300 px-4 py-2 rounded hover:bg-gray-700 transition-colors">
+          <span>{link.icon}</span>
+          <span>{link.label}</span>
+          {link.badge && (
+            <span class="text-xs bg-gray-800 px-2 py-1 rounded">{link.badge}</span>
+          )}
+        </a>
+      ))}
+    </div>
+  </div>
+</div>

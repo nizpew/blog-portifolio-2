@@ -1,0 +1,50 @@
+---
+const leftItems = [
+  { href: '/', label: 'Sávio Arbuês', icon: '👤' },
+  { href: '/newsletter', label: 'Newsletter', icon: '📫' }
+];
+
+const rightItems = [
+  { href: '/ama', label: 'AMA', icon: '💭' },
+  { href: '/pages', label: 'Pages', icon: '📄' },
+  { href: '/about', label: 'About', icon: 'ℹ️' }
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 bg-[#1a1a1a] border-b border-gray-800 z-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between h-16">
+      <div class="flex items-center space-x-4">
+        {leftItems.map(item => (
+          <a href={item.href} class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-2">
+            <span>{item.icon}</span>
+            <span>{item.label}</span>
+          </a>
+        ))}
+      </div>
+      
+      <div class="flex items-center">
+        <div class="flex-1 flex justify-center px-2 lg:ml-6 lg:justify-end">
+          <div class="max-w-lg w-full lg:max-w-xs">
+            <div class="relative">
+              <input
+                type="text"
+                class="block w-full bg-gray-800 border border-transparent rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900"
+                placeholder="Type your command or search..."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        {rightItems.map(item => (
+          <a href={item.href} class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-2">
+            <span>{item.icon}</span>
+            <span>{item.label}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</nav>
