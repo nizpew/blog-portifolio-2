@@ -1,0 +1,22 @@
+---
+const navItems = [
+  { href: '/blog', label: 'Blog' },
+  { href: '/research', label: 'Pesquisas' },
+  { href: '/about', label: 'Sobre' }
+];
+---
+
+<header class="bg-[#1a1a1a] text-white py-4">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center">
+      <a href="/" class="text-xl font-bold">Sávio Arbuês</a>
+      <div class="flex space-x-6">
+        {navItems.map(item => (
+          <a href={item.href} class="hover:text-gray-300 transition-colors">
+            {item.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </nav>
+</header>
