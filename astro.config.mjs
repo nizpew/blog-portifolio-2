@@ -3,5 +3,16 @@ import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
-	integrations: [tailwind(), mdx()],
+  integrations: [tailwind(), mdx()],
+  site: 'https://savioarbues.github.io',
+  base: '/',
+  build: {
+    assets: 'assets'
+  },
+  markdown: {
+    shikiConfig: {
+      theme: 'dracula',
+      wrap: true
+    }
+  }
 });

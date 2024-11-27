@@ -12,10 +12,13 @@ const interests = [
     <p class="text-gray-300 mb-4">
       Estou interessado tanto nos aspectos teóricos quanto aplicados do aprendizado de máquina e ciência de dados, especialmente seu papel no desenvolvimento de software.
     </p>
-    <ul class="list-disc pl-6 text-gray-300 space-y-2">
+    <div class="space-y-2">
       {interests.map(interest => (
-        <li>{interest}</li>
+        <div class="flex items-start space-x-2 text-gray-300">
+          <span class="text-blue-400">•</span>
+          <p>{interest}</p>
+        </div>
       ))}
-    </ul>
+    </div>
   </div>
 </section>

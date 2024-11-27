@@ -25,8 +25,33 @@ const { title } = Astro.props;
     </main>
     <footer class="bg-gray-800 mt-12 py-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
-        <p>CC BY-NC-SA 4.0 · Open Source Software (OSS)</p>
+        <p>&copy; {new Date().getFullYear()} Sávio Arbuês · CC BY-NC-SA 4.0 · Open Source Software (OSS)</p>
       </div>
     </footer>
   </body>
 </html>
+
+<style is:global>
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  
+  html {
+    font-family: system-ui, sans-serif;
+    background: #1a1a1a;
+    color: #ffffff;
+  }
+  
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+      Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+</style>
